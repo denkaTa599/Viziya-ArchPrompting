@@ -1,0 +1,19 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "model": {"type": ["string", "null"], "enum": ["Nano Banana", "GPT Image", null]},
+    "asks_model": {"type": "boolean"},
+    "message": {"type": "string"},
+    "blocks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {"label": {"type": "string"}, "text": {"type": "string"}},
+        "required": ["label", "text"]
+      }
+    }
+  },
+  "required": ["model", "asks_model", "message", "blocks"]
+}

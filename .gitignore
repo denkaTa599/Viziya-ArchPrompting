@@ -1,0 +1,4 @@
+# v1.0: exclude generated Python caches and agent evidence.
+__pycache__/
+*.pyc
+agent-results/
