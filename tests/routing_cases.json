@@ -1,0 +1,582 @@
+[
+  {
+    "id": "revit-nano",
+    "operation": "create",
+    "task": "Nano Banana: write a prompt converting a hypothetical supplied Revit exterior into a photorealistic daylight image with convincing clean limestone. Preserve geometry and camera.",
+    "required": [
+      "IMAGE_PROMPTING.md",
+      "ARCHITECTURAL_FIDELITY.md",
+      "MATERIAL_REALISM.md",
+      "PHOTOGRAPHIC_REALISM.md"
+    ],
+    "forbidden": [
+      "REFERENCE_DECONSTRUCTION.md",
+      "VISUAL_QA.md",
+      "PROJECT_CONTINUITY.md"
+    ],
+    "prior_model": null,
+    "already_loaded": [],
+    "expected_model": "Nano Banana",
+    "expects_question": false,
+    "expected_blocks": [
+      "System Instruction",
+      "Prompt"
+    ]
+  },
+  {
+    "id": "facade-gpt",
+    "operation": "edit",
+    "task": "GPT Image: replace only the stone facade finish with honed limestone in an existing fixed building view. Preserve geometry, joints, camera and lighting; no new photographic treatment.",
+    "required": [
+      "IMAGE_PROMPTING.md",
+      "ARCHITECTURAL_FIDELITY.md",
+      "MATERIAL_REALISM.md"
+    ],
+    "forbidden": [
+      "PHOTOGRAPHIC_REALISM.md",
+      "REFERENCE_DECONSTRUCTION.md",
+      "VISUAL_QA.md",
+      "PROJECT_CONTINUITY.md"
+    ],
+    "prior_model": null,
+    "already_loaded": [],
+    "expected_model": "GPT Image",
+    "expects_question": false,
+    "expected_blocks": [
+      "Prompt"
+    ]
+  },
+  {
+    "id": "new-imperfections",
+    "operation": "edit",
+    "task": "GPT Image: add plausible intrinsic surface variation to the limestone and coated metal of a newly constructed building. Preserve its geometry and existing view; do not age or relight it.",
+    "required": [
+      "IMAGE_PROMPTING.md",
+      "ARCHITECTURAL_FIDELITY.md",
+      "MATERIAL_REALISM.md"
+    ],
+    "forbidden": [
+      "PHOTOGRAPHIC_REALISM.md",
+      "REFERENCE_DECONSTRUCTION.md",
+      "VISUAL_QA.md",
+      "PROJECT_CONTINUITY.md"
+    ],
+    "prior_model": null,
+    "already_loaded": [],
+    "expected_model": "GPT Image",
+    "expects_question": false,
+    "expected_blocks": [
+      "Prompt"
+    ]
+  },
+  {
+    "id": "old-weathering",
+    "operation": "edit",
+    "task": "Nano Banana: weather the timber on an old building according to rain exposure and maintenance. Keep the existing geometry and camera; material-only change.",
+    "required": [
+      "IMAGE_PROMPTING.md",
+      "ARCHITECTURAL_FIDELITY.md",
+      "MATERIAL_REALISM.md"
+    ],
+    "forbidden": [
+      "PHOTOGRAPHIC_REALISM.md",
+      "REFERENCE_DECONSTRUCTION.md",
+      "VISUAL_QA.md",
+      "PROJECT_CONTINUITY.md"
+    ],
+    "prior_model": null,
+    "already_loaded": [],
+    "expected_model": "Nano Banana",
+    "expects_question": false,
+    "expected_blocks": [
+      "System Instruction",
+      "Prompt"
+    ]
+  },
+  {
+    "id": "architecture-lighting",
+    "operation": "edit",
+    "task": "GPT Image: change only the realistic daylight and photographic tonal treatment of this fixed architectural view. Retain all geometry and material assignments; no material redesign or weathering.",
+    "required": [
+      "IMAGE_PROMPTING.md",
+      "ARCHITECTURAL_FIDELITY.md",
+      "PHOTOGRAPHIC_REALISM.md"
+    ],
+    "forbidden": [
+      "MATERIAL_REALISM.md",
+      "REFERENCE_DECONSTRUCTION.md",
+      "VISUAL_QA.md",
+      "PROJECT_CONTINUITY.md"
+    ],
+    "prior_model": null,
+    "already_loaded": [],
+    "expected_model": "GPT Image",
+    "expects_question": false,
+    "expected_blocks": [
+      "Prompt"
+    ]
+  },
+  {
+    "id": "style-reference",
+    "operation": "edit",
+    "task": "Nano Banana: use a supplied photograph to extract its soft side lighting and restrained color grade for a generic tabletop scene. Transfer only those photographic qualities.",
+    "required": [
+      "IMAGE_PROMPTING.md",
+      "PHOTOGRAPHIC_REALISM.md",
+      "REFERENCE_DECONSTRUCTION.md"
+    ],
+    "forbidden": [
+      "ARCHITECTURAL_FIDELITY.md",
+      "MATERIAL_REALISM.md",
+      "VISUAL_QA.md",
+      "PROJECT_CONTINUITY.md"
+    ],
+    "prior_model": null,
+    "already_loaded": [],
+    "expected_model": "Nano Banana",
+    "expects_question": false,
+    "expected_blocks": [
+      "System Instruction",
+      "Prompt"
+    ]
+  },
+  {
+    "id": "geometry-edit",
+    "operation": "edit",
+    "task": "GPT Image: preserve the exact geometry and camera of a hypothetical supplied architectural line drawing while changing only its flat background color. No photorealism.",
+    "required": [
+      "IMAGE_PROMPTING.md",
+      "ARCHITECTURAL_FIDELITY.md"
+    ],
+    "forbidden": [
+      "MATERIAL_REALISM.md",
+      "PHOTOGRAPHIC_REALISM.md",
+      "REFERENCE_DECONSTRUCTION.md",
+      "VISUAL_QA.md",
+      "PROJECT_CONTINUITY.md"
+    ],
+    "prior_model": null,
+    "already_loaded": [],
+    "expected_model": "GPT Image",
+    "expects_question": false,
+    "expected_blocks": [
+      "Prompt"
+    ]
+  },
+  {
+    "id": "geometry-correction",
+    "operation": "correct",
+    "task": "Nano Banana: the user reports a failed hotel render changed the window count. Write a correction using the original model view; preserve approved materials and photographic treatment. Do not claim to inspect an unavailable result.",
+    "required": [
+      "IMAGE_PROMPTING.md",
+      "ARCHITECTURAL_FIDELITY.md",
+      "VISUAL_QA.md"
+    ],
+    "forbidden": [
+      "MATERIAL_REALISM.md",
+      "PHOTOGRAPHIC_REALISM.md",
+      "REFERENCE_DECONSTRUCTION.md",
+      "PROJECT_CONTINUITY.md"
+    ],
+    "prior_model": null,
+    "already_loaded": [],
+    "expected_model": "Nano Banana",
+    "expects_question": false,
+    "expected_blocks": [
+      "System Instruction",
+      "Prompt"
+    ]
+  },
+  {
+    "id": "reflection-correction",
+    "operation": "correct",
+    "task": "GPT Image: diagnose user-reported impossible reflections on a building's glazing and write a correction. Keep architectural geometry and camera fixed; correct glass optical behavior and coherence with scene lighting.",
+    "required": [
+      "IMAGE_PROMPTING.md",
+      "ARCHITECTURAL_FIDELITY.md",
+      "MATERIAL_REALISM.md",
+      "PHOTOGRAPHIC_REALISM.md",
+      "VISUAL_QA.md"
+    ],
+    "forbidden": [
+      "REFERENCE_DECONSTRUCTION.md",
+      "PROJECT_CONTINUITY.md"
+    ],
+    "prior_model": null,
+    "already_loaded": [],
+    "expected_model": "GPT Image",
+    "expects_question": false,
+    "expected_blocks": [
+      "Prompt"
+    ]
+  },
+  {
+    "id": "architecture-series",
+    "operation": "create",
+    "task": "Nano Banana: prepare a consistent series of photorealistic architectural views with identical specified stone and metal finishes. Each native view controls its own geometry and camera; use the established written material ledger, with no appearance extraction from an image.",
+    "required": [
+      "IMAGE_PROMPTING.md",
+      "ARCHITECTURAL_FIDELITY.md",
+      "MATERIAL_REALISM.md",
+      "PHOTOGRAPHIC_REALISM.md",
+      "PROJECT_CONTINUITY.md"
+    ],
+    "forbidden": [
+      "REFERENCE_DECONSTRUCTION.md",
+      "VISUAL_QA.md"
+    ],
+    "prior_model": null,
+    "already_loaded": [],
+    "expected_model": "Nano Banana",
+    "expects_question": false,
+    "expected_blocks": [
+      "System Instruction",
+      "Prompt"
+    ]
+  },
+  {
+    "id": "character-series",
+    "operation": "create",
+    "task": "GPT Image: write a workflow for the same character across three cinematic photographic shots, using an identity reference only. Keep identity and clothing consistent; no style extraction.",
+    "required": [
+      "IMAGE_PROMPTING.md",
+      "PHOTOGRAPHIC_REALISM.md",
+      "PROJECT_CONTINUITY.md"
+    ],
+    "forbidden": [
+      "ARCHITECTURAL_FIDELITY.md",
+      "MATERIAL_REALISM.md",
+      "REFERENCE_DECONSTRUCTION.md",
+      "VISUAL_QA.md"
+    ],
+    "prior_model": null,
+    "already_loaded": [],
+    "expected_model": "GPT Image",
+    "expects_question": false,
+    "expected_blocks": [
+      "Prompt"
+    ]
+  },
+  {
+    "id": "text-only",
+    "operation": "edit",
+    "task": "GPT Image: replace the poster title 'Welcome' with 'Open today'. Preserve typography, alignment and every other region.",
+    "required": [
+      "IMAGE_PROMPTING.md"
+    ],
+    "forbidden": [
+      "ARCHITECTURAL_FIDELITY.md",
+      "MATERIAL_REALISM.md",
+      "PHOTOGRAPHIC_REALISM.md",
+      "REFERENCE_DECONSTRUCTION.md",
+      "VISUAL_QA.md",
+      "PROJECT_CONTINUITY.md"
+    ],
+    "prior_model": null,
+    "already_loaded": [],
+    "expected_model": "GPT Image",
+    "expects_question": false,
+    "expected_blocks": [
+      "Prompt"
+    ]
+  },
+  {
+    "id": "generic-image",
+    "operation": "create",
+    "task": "GPT Image: write a prompt for a flat cartoon blue bird on a yellow background. Single independent image, no references.",
+    "required": [
+      "IMAGE_PROMPTING.md"
+    ],
+    "forbidden": [
+      "ARCHITECTURAL_FIDELITY.md",
+      "MATERIAL_REALISM.md",
+      "PHOTOGRAPHIC_REALISM.md",
+      "REFERENCE_DECONSTRUCTION.md",
+      "VISUAL_QA.md",
+      "PROJECT_CONTINUITY.md"
+    ],
+    "prior_model": null,
+    "already_loaded": [],
+    "expected_model": "GPT Image",
+    "expects_question": false,
+    "expected_blocks": [
+      "Prompt"
+    ]
+  },
+  {
+    "id": "technical-diagram",
+    "operation": "create",
+    "task": "Nano Banana: write a prompt for a technical architectural section from a supplied drawing. Preserve geometry, dimensions and line hierarchy using accurate overlays; no photographic or material rendering.",
+    "required": [
+      "IMAGE_PROMPTING.md",
+      "ARCHITECTURAL_FIDELITY.md"
+    ],
+    "forbidden": [
+      "MATERIAL_REALISM.md",
+      "PHOTOGRAPHIC_REALISM.md",
+      "REFERENCE_DECONSTRUCTION.md",
+      "VISUAL_QA.md",
+      "PROJECT_CONTINUITY.md"
+    ],
+    "prior_model": null,
+    "already_loaded": [],
+    "expected_model": "Nano Banana",
+    "expects_question": false,
+    "expected_blocks": [
+      "System Instruction",
+      "Prompt"
+    ]
+  },
+  {
+    "id": "combined",
+    "operation": "create",
+    "task": "GPT Image: create a photorealistic architectural series from current Revit views, using a material reference for limestone finish and a photograph for lighting and tonal style. Preserve each view's geometry and camera and the approved series identity. No failed output to diagnose.",
+    "required": [
+      "IMAGE_PROMPTING.md",
+      "ARCHITECTURAL_FIDELITY.md",
+      "MATERIAL_REALISM.md",
+      "PHOTOGRAPHIC_REALISM.md",
+      "REFERENCE_DECONSTRUCTION.md",
+      "PROJECT_CONTINUITY.md"
+    ],
+    "forbidden": [
+      "VISUAL_QA.md"
+    ],
+    "prior_model": null,
+    "already_loaded": [],
+    "expected_model": "GPT Image",
+    "expects_question": false,
+    "expected_blocks": [
+      "Prompt"
+    ]
+  },
+  {
+    "id": "explicit-nano",
+    "operation": "create",
+    "task": "Use Nano Banana to write a prompt for a simple red circle on white.",
+    "required": [
+      "IMAGE_PROMPTING.md"
+    ],
+    "forbidden": [
+      "ARCHITECTURAL_FIDELITY.md",
+      "MATERIAL_REALISM.md",
+      "PHOTOGRAPHIC_REALISM.md",
+      "REFERENCE_DECONSTRUCTION.md",
+      "VISUAL_QA.md",
+      "PROJECT_CONTINUITY.md"
+    ],
+    "prior_model": null,
+    "already_loaded": [],
+    "expected_model": "Nano Banana",
+    "expects_question": false,
+    "expected_blocks": [
+      "System Instruction",
+      "Prompt"
+    ]
+  },
+  {
+    "id": "explicit-chatgpt",
+    "operation": "create",
+    "task": "Use ChatGPT Images to write a prompt for a simple green square on white.",
+    "required": [
+      "IMAGE_PROMPTING.md"
+    ],
+    "forbidden": [
+      "ARCHITECTURAL_FIDELITY.md",
+      "MATERIAL_REALISM.md",
+      "PHOTOGRAPHIC_REALISM.md",
+      "REFERENCE_DECONSTRUCTION.md",
+      "VISUAL_QA.md",
+      "PROJECT_CONTINUITY.md"
+    ],
+    "prior_model": null,
+    "already_loaded": [],
+    "expected_model": "GPT Image",
+    "expects_question": false,
+    "expected_blocks": [
+      "Prompt"
+    ]
+  },
+  {
+    "id": "followup-inherited",
+    "operation": "revise",
+    "task": "Now make that same limestone slightly warmer. Keep the previous model, fixed architecture view, geometry, camera and lighting.",
+    "required": [
+      "IMAGE_PROMPTING.md",
+      "ARCHITECTURAL_FIDELITY.md",
+      "MATERIAL_REALISM.md"
+    ],
+    "forbidden": [
+      "PHOTOGRAPHIC_REALISM.md",
+      "REFERENCE_DECONSTRUCTION.md",
+      "VISUAL_QA.md",
+      "PROJECT_CONTINUITY.md"
+    ],
+    "prior_model": "GPT Image",
+    "already_loaded": [
+      "IMAGE_PROMPTING.md",
+      "ARCHITECTURAL_FIDELITY.md",
+      "MATERIAL_REALISM.md"
+    ],
+    "expected_model": "GPT Image",
+    "expects_question": false,
+    "expected_blocks": [
+      "Prompt"
+    ]
+  },
+  {
+    "id": "identity-only",
+    "operation": "create",
+    "task": "GPT Image: create one photographic portrait using the attached person only as an identity reference. Neutral studio light; no transfer of source lighting, palette or style and no image series.",
+    "required": [
+      "IMAGE_PROMPTING.md",
+      "PHOTOGRAPHIC_REALISM.md"
+    ],
+    "forbidden": [
+      "ARCHITECTURAL_FIDELITY.md",
+      "MATERIAL_REALISM.md",
+      "REFERENCE_DECONSTRUCTION.md",
+      "VISUAL_QA.md",
+      "PROJECT_CONTINUITY.md"
+    ],
+    "prior_model": null,
+    "already_loaded": [],
+    "expected_model": "GPT Image",
+    "expects_question": false,
+    "expected_blocks": [
+      "Prompt"
+    ]
+  },
+  {
+    "id": "prompt-revision",
+    "operation": "revise",
+    "task": "GPT Image: shorten the supplied flat poster prompt without changing its text/layout requirements. No failed image is being evaluated.",
+    "required": [
+      "IMAGE_PROMPTING.md"
+    ],
+    "forbidden": [
+      "ARCHITECTURAL_FIDELITY.md",
+      "MATERIAL_REALISM.md",
+      "PHOTOGRAPHIC_REALISM.md",
+      "REFERENCE_DECONSTRUCTION.md",
+      "VISUAL_QA.md",
+      "PROJECT_CONTINUITY.md"
+    ],
+    "prior_model": null,
+    "already_loaded": [],
+    "expected_model": "GPT Image",
+    "expects_question": false,
+    "expected_blocks": [
+      "Prompt"
+    ]
+  },
+  {
+    "id": "model-neutral-analysis",
+    "operation": "analyze",
+    "task": "Compare two hypothetical flat graphic outputs for exact text and layout compliance only. Give model-neutral analysis, not a corrective prompt; no photographic appearance extraction.",
+    "required": [
+      "IMAGE_PROMPTING.md",
+      "VISUAL_QA.md"
+    ],
+    "forbidden": [
+      "ARCHITECTURAL_FIDELITY.md",
+      "MATERIAL_REALISM.md",
+      "PHOTOGRAPHIC_REALISM.md",
+      "REFERENCE_DECONSTRUCTION.md",
+      "PROJECT_CONTINUITY.md"
+    ],
+    "prior_model": null,
+    "already_loaded": [],
+    "expected_model": null,
+    "expects_question": false,
+    "expected_blocks": []
+  },
+  {
+    "id": "unresolved-model",
+    "operation": "create",
+    "task": "Write an image prompt for a simple purple triangle on white.",
+    "required": [
+      "IMAGE_PROMPTING.md"
+    ],
+    "forbidden": [
+      "ARCHITECTURAL_FIDELITY.md",
+      "MATERIAL_REALISM.md",
+      "PHOTOGRAPHIC_REALISM.md",
+      "REFERENCE_DECONSTRUCTION.md",
+      "VISUAL_QA.md",
+      "PROJECT_CONTINUITY.md"
+    ],
+    "prior_model": null,
+    "already_loaded": [],
+    "expected_model": null,
+    "expects_question": true,
+    "expected_blocks": []
+  },
+  {
+    "id": "skill-maintenance",
+    "operation": "maintenance",
+    "task": "Explain how this skill chooses modules. Do not draft or diagnose an image prompt.",
+    "required": [],
+    "forbidden": [
+      "IMAGE_PROMPTING.md",
+      "ARCHITECTURAL_FIDELITY.md",
+      "MATERIAL_REALISM.md",
+      "PHOTOGRAPHIC_REALISM.md",
+      "REFERENCE_DECONSTRUCTION.md",
+      "VISUAL_QA.md",
+      "PROJECT_CONTINUITY.md"
+    ],
+    "prior_model": null,
+    "already_loaded": [],
+    "expected_model": null,
+    "expects_question": false,
+    "expected_blocks": []
+  },
+  {
+    "id": "literal-model-name",
+    "operation": "edit",
+    "task": "GPT Image: replace the exact poster text 'Nano Banana architecture photo' with 'Open today'; preserve all other content. The quoted words are image copy, not a model or style instruction.",
+    "required": [
+      "IMAGE_PROMPTING.md"
+    ],
+    "forbidden": [
+      "ARCHITECTURAL_FIDELITY.md",
+      "MATERIAL_REALISM.md",
+      "PHOTOGRAPHIC_REALISM.md",
+      "REFERENCE_DECONSTRUCTION.md",
+      "VISUAL_QA.md",
+      "PROJECT_CONTINUITY.md"
+    ],
+    "prior_model": null,
+    "already_loaded": [],
+    "expected_model": "GPT Image",
+    "expects_question": false,
+    "expected_blocks": [
+      "Prompt"
+    ]
+  },
+  {
+    "id": "switch-model",
+    "operation": "create",
+    "task": "Switch to Nano Banana and write a prompt for a simple blue circle.",
+    "required": [
+      "IMAGE_PROMPTING.md"
+    ],
+    "forbidden": [
+      "ARCHITECTURAL_FIDELITY.md",
+      "MATERIAL_REALISM.md",
+      "PHOTOGRAPHIC_REALISM.md",
+      "REFERENCE_DECONSTRUCTION.md",
+      "VISUAL_QA.md",
+      "PROJECT_CONTINUITY.md"
+    ],
+    "prior_model": "GPT Image",
+    "already_loaded": [],
+    "expected_model": "Nano Banana",
+    "expects_question": false,
+    "expected_blocks": [
+      "System Instruction",
+      "Prompt"
+    ]
+  }
+]
